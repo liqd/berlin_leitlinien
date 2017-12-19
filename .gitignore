@@ -2,10 +2,10 @@
 *.sqlite3*
 *.mo
 node_modules
-tempelhof/static/*.css
-tempelhof/static/*.js
-tempelhof/static/fonts
-tempelhof/static/images/Roboto*
+leitlinien/static/*.css
+leitlinien/static/*.js
+leitlinien/static/fonts
+leitlinien/static/images/Roboto*
 media/
 .env/
 .idea/

@@ -1,7 +1,7 @@
 VIRTUAL_ENV ?= .env
 NODE_BIN = node_modules/.bin
-SCSS_FILES := $(shell find 'tempelhof/assets/scss' -name '*.scss')
-JS_FILES := $(shell find 'tempelhof/assets/js' | grep '\.jsx\?$$')
+SCSS_FILES := $(shell find 'leitlinien/assets/scss' -name '*.scss')
+JS_FILES := $(shell find 'leitlinien/assets/js' | grep '\.jsx\?$$')
 PO_FILES := $(shell find . -name '*.po')
 
 install:

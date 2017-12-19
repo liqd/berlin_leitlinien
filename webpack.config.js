@@ -5,9 +5,9 @@ var autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: {
-    tempelhof: [
-      './tempelhof/assets/scss/style.scss',
-      './tempelhof/assets/js/app.js'
+    leitlinien: [
+      './leitlinien/assets/scss/style.scss',
+      './leitlinien/assets/js/app.js'
     ],
     vendor: [
       'font-awesome/scss/font-awesome.scss',
@@ -17,8 +17,8 @@ module.exports = {
   devtool: 'eval',
   output: {
     libraryTarget: 'var',
-    library: 'tempelhof',
-    path: path.resolve('./tempelhof/static/'),
+    library: 'leitlinien',
+    path: path.resolve('./leitlinien/static/'),
     publicPath: '/static/',
     filename: '[name].js'
   },
