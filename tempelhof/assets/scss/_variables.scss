@@ -1,0 +1,41 @@
+// subset of bootstrap variables
+$berlin-primary: #253377;
+$berlin-secondary: #b5050e;
+$brand-primary: #1e50be;
+$brand-secondary: #e6eeff;
+
+$body-bg: #fff;
+$bg-secondary: #f3f3f3;
+$bg-inverted: #000;
+$text-color: #333;
+$text-color-inverted: $body-bg;
+$text-secondary: #999;
+$shadow: rgba(#000, 0.25);
+
+$link-color: $brand-primary;
+$link-hover-color: darken($link-color, 15%);
+
+$border-color: #ccc;
+$input-border-color: $border-color;
+
+$spacer: 1em;
+$padding: 1rem;
+
+$font-family-sans-serif: "Roboto", "Arial", "Helvetica", sans-serif;
+
+$font-size-xxl: 1.95rem;
+$font-size-xl: 1.56rem;
+$font-size-lg: 1.25rem;
+$font-size-sm: 0.8rem;
+$font-size-xs: 0.64rem;
+
+$transition-duration: 0.2s;
+
+$hero-height: 41em;
+$hero-height-mobile: 25em;
+
+$breakpoint: 50em;
+
+@include grid-set('gutter', $padding);
+$planifolia-contrast-dark-default: $text-color;
+$planifolia-contrast-light-default: $text-color-inverted;

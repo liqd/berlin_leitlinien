@@ -1,0 +1,35 @@
+.archive-list__item {
+    margin-bottom: 2.5em;
+    padding-top: 2.5em;
+    border-top: 1px solid $border-color;
+
+    @include clearfix;
+
+    &:first-child {
+        padding-top: 0;
+        border-top: 0;
+    }
+}
+
+.archive-list__date {
+    @include secondary-text;
+
+    @media (min-width: $breakpoint) {
+        @include grid-span(3, 0, (columns: 8, gutter: 2.1em));
+        text-align: right;
+    }
+
+    @media (max-width: $breakpoint) {
+        margin-bottom: 0.5em;
+    }
+}
+
+.archive-list__body {
+    @media (min-width: $breakpoint) {
+        @include grid-span(5, 3, (columns: 8, gutter: 2.1em));
+    }
+}
+
+.archive-list__title {
+    margin-top: 0;
+}

@@ -1,0 +1,45 @@
+.projects-block {
+    padding: 2.5em 0;
+
+    background: $brand-secondary;
+}
+
+.projects-block__title {
+    margin: 0 0 1em;
+
+    text-align: center;
+    color: contrast-color($brand-secondary);
+}
+
+.projects-block__item {
+    @include clearfix;
+    margin-bottom: 1.5em;
+    border-radius: 0.25em;
+
+    background: $body-bg;
+}
+
+.projects-block__item--bordered {
+    border: 1px solid $border-color;
+}
+
+.projects-block__body {
+    padding: 1em;
+    overflow: hidden;
+}
+
+.projects-block__date {
+    @include secondary-text;
+}
+
+.projects-block__img {
+    display: block;
+}
+
+.projects-block__img-wrapper {
+    position: relative;
+
+    @media screen and (min-width: $breakpoint) {
+        float: left;
+    }
+}

@@ -1,0 +1,23 @@
+.calendar-entry {
+    border-top: 1px solid $border-color;
+    padding: $spacer 0 0;
+
+    &:last-of-type {
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 1.5em;
+    }
+}
+
+.calendar-entry__title {
+    font-size: $font-size-lg;
+    margin-top: 0;
+
+    a {
+        color: inherit;
+    }
+}
+
+.calendar-entry__date {
+    @include secondary-text;
+    float: right;
+}

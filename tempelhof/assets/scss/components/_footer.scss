@@ -1,0 +1,40 @@
+.footer {
+    margin-top: 3em;
+
+    @include clearfix;
+
+    a {
+        color: inherit;
+        transition: color $transition-duration;
+        text-decoration: none;
+        font-weight: 400;
+
+        &:hover,
+        &:focus {
+            color: $brand-primary;
+        }
+    }
+}
+
+.footer__container {
+    border-top: 1px solid $border-color;
+    padding: 1.1em 0 2.2em;
+}
+
+.footer__left {
+    float: left;
+}
+
+.footer__list {
+    margin: 0;
+
+    overflow: hidden;
+
+    text-align: right;
+    list-style: none;
+}
+
+.footer__item {
+    display: inline-block;
+    margin-left: 2em;
+}
