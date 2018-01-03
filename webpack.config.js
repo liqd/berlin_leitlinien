@@ -6,8 +6,8 @@ var autoprefixer = require('autoprefixer')
 module.exports = {
   entry: {
     leitlinien: [
-      './leitlinien/assets/scss/style.scss',
-      './leitlinien/assets/js/app.js'
+      './berlin_leitlinien/assets/scss/style.scss',
+      './berlin_leitlinien/assets/js/app.js'
     ],
     vendor: [
       'font-awesome/scss/font-awesome.scss',
@@ -18,7 +18,7 @@ module.exports = {
   output: {
     libraryTarget: 'var',
     library: 'leitlinien',
-    path: path.resolve('./leitlinien/static/'),
+    path: path.resolve('./berlin_leitlinien/static/'),
     publicPath: '/static/',
     filename: '[name].js'
   },

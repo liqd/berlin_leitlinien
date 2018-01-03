@@ -72,7 +72,7 @@ MIDDLEWARE_CLASSES = [
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 ]
 
-ROOT_URLCONF = 'leitlinien.urls'
+ROOT_URLCONF = 'berlin_leitlinien.urls'
 
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
@@ -94,7 +94,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'leitlinien.wsgi.application'
+WSGI_APPLICATION = 'berlin_leitlinien.wsgi.application'
 
 
 # Database
@@ -143,7 +143,7 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "leitlinien"
+WAGTAIL_SITE_NAME = "berlin_leitlinien"
 WAGTAILIMAGES_IMAGE_MODEL = 'images.CustomImage'
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
