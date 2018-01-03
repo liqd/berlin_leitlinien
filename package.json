@@ -1,6 +1,6 @@
 {
   "name": "leitlinien",
-  "repository": "https://github.com/liqd/berlin-leitlinien.git",
+  "repository": "https://github.com/liqd/berlin_leitlinien.git",
   "dependencies": {
     "autoprefixer": "7.1.5",
     "babel-core": "6.26.0",
