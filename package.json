@@ -1,5 +1,5 @@
 {
-  "name": "leitlinien",
+  "name": "berlin_leitlinien",
   "repository": "https://github.com/liqd/berlin_leitlinien.git",
   "dependencies": {
     "autoprefixer": "7.1.5",

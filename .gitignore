@@ -2,10 +2,10 @@
 *.sqlite3*
 *.mo
 node_modules
-leitlinien/static/*.css
-leitlinien/static/*.js
-leitlinien/static/fonts
-leitlinien/static/images/Roboto*
+berlin_leitlinien/static/*.css
+berlin_leitlinien/static/*.js
+berlin_leitlinien/static/fonts
+berlin_leitlinien/static/images/Roboto*
 media/
 .env/
 .idea/
