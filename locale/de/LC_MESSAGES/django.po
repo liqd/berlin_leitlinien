@@ -75,7 +75,7 @@ msgstr "Menü"
 
 #: apps/projects/models.py:11
 msgid "Project Containers"
-msgstr "Vorhaben"
+msgstr "Vorhaben 1. Ebene"
 
 #: apps/projects/models.py:31 apps/projects/models.py:64
 msgid "Shown in list."
@@ -83,11 +83,11 @@ msgstr "In Liste anzeigen"
 
 #: apps/projects/models.py:41
 msgid "Project Container"
-msgstr "Vorhaben"
+msgstr "Vorhaben 2. Ebene"
 
 #: apps/projects/models.py:78
 msgid "Project"
-msgstr "Projekt"
+msgstr "Vorhaben"
 
 #: apps/projects/templates/projects/blocks/projectslist_block.html:21
 #: apps/projects/templates/projects/project_container_page.html:38

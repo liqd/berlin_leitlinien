@@ -41,7 +41,7 @@ class ProjectContainerPage(Page):
         verbose_name = _('Project Container')
 
     parent_page_types = [
-        'ProjectIndexPage'
+        'ProjectIndexPage', 'home.HomePage'
     ]
     subpage_types = [
         'ProjectPage'
