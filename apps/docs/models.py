@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from wagtail.wagtailadmin import edit_handlers
 from wagtail.wagtailcore import fields
+from wagtail.wagtailcore.blocks import RichTextBlock
 from wagtail.wagtailcore.models import Page
 
 from .blocks import DocsBlock
@@ -9,7 +10,8 @@ from .blocks import DocsBlock
 
 class DocsPage(Page):
     body = fields.StreamField([
-        ('documents_list', DocsBlock())
+        ('documents_list', DocsBlock()),
+        ('Text', RichTextBlock())
     ])
 
     description = models.CharField(max_length=200)
