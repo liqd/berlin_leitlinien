@@ -1,6 +1,7 @@
 .docs-block {
     border: solid 1px $border-color;
     border-radius: 5px;
+    margin-bottom: $padding;
 
     // make border-radius work with contents
     overflow: hidden;
