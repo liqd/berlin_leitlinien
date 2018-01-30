@@ -19,8 +19,6 @@
         <div class="l-center-6">
             {{ self.description | richtext }}
         </div>
-        <div class="l-center-8">
-            {{ self.embed_code | safe }}
-        </div>
+        {{ self.embed_code | safe }}
     </div>
 {% endblock %}
