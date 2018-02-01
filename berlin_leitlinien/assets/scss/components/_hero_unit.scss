@@ -7,9 +7,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: $brand-secondary;
+    background-color: $custom-image-background-gray;
 
     min-height: $hero-height-mobile;
+
     @media screen and (min-width: $breakpoint) {
         min-height: $hero-height;
     }
