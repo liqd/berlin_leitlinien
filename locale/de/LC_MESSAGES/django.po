@@ -92,7 +92,7 @@ msgstr "Vorhaben"
 #: apps/projects/templates/projects/blocks/projectslist_block.html:21
 #: apps/projects/templates/projects/project_container_page.html:38
 msgid "go to project"
-msgstr "Zum Projekt"
+msgstr "Zur Beteiligungsmöglichkeit"
 
 #: apps/projects/templates/projects/project_index_page.html:28
 msgid "go to project container"
