@@ -4,11 +4,21 @@ from wagtail.wagtailadmin import edit_handlers
 from wagtail.wagtailcore import fields
 from wagtail.wagtailcore.blocks import RichTextBlock
 from wagtail.wagtailcore.models import Page
+from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 
 from .blocks import DocsBlock
 
 
 class DocsPage(Page):
+
+    image = models.ForeignKey(
+        'images.CustomImage',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
+
     body = fields.StreamField([
         ('documents_list', DocsBlock()),
         ('Text', RichTextBlock())
@@ -17,6 +27,7 @@ class DocsPage(Page):
     description = models.CharField(max_length=200)
 
     content_panels = Page.content_panels + [
+        ImageChooserPanel('image'),
         edit_handlers.FieldPanel('description'),
         edit_handlers.StreamFieldPanel('body'),
     ]

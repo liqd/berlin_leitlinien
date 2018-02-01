@@ -5,13 +5,19 @@
     <div class="page-header">
         <div class="l-wrapper page-header__wrapper">
             <h1 class="page-header__title">
-                <i class="fa fa-archive" aria-hidden="true"></i> {{ self.title }}
+                {{ self.title }}
             </h1>
-            <p class="l-center-6">{{ self.description }}</p>
+            <p class="l-center-8">{{ self.description }}</p>
+        </div>
+        <div class="page-header__img-wrapper">
+            {% image self.image fill-1920x600 %}
+            {% if self.image.author %}
+                <p class="img-author">&copy; {{ self.image.author }}</p>
+            {% endif %}
         </div>
     </div>
     <div class="l-wrapper">
-        <div class="l-center-6">
+        <div class="l-center-8">
             {% for block in self.body %}
                 {% include_block block with index=forloop.counter %}
             {% endfor %}
