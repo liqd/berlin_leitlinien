@@ -8,6 +8,7 @@ from apps.contrib.mixins import PaginatorMixin
 
 
 class CalendarPage(PaginatorMixin, Page):
+    short_description = models.CharField(max_length=112, blank=True)
     objects_per_page = 12
 
     def get_ordered_children(self):
@@ -21,6 +22,9 @@ class CalendarPage(PaginatorMixin, Page):
     ]
     subpage_types = [
         'events.EventPage'
+    ]
+    content_panels = Page.content_panels + [
+        edit_handlers.FieldPanel('short_description'),
     ]
 
 
