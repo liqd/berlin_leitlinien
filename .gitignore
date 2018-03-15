@@ -7,6 +7,6 @@ berlin_leitlinien/static/*.js
 berlin_leitlinien/static/fonts
 berlin_leitlinien/static/images/Roboto*
 media/
-/env/
-/static/
+venv/
+static/
 .idea/
