@@ -28,6 +28,7 @@ class HomePage(Page):
     body = fields.StreamField([
         ('text', blocks.RichTextBlock(icon='doc-full',
                                       template='home/blocks/text.html')),
+        ('html', blocks.RawHTMLBlock(template='home/blocks/text.html')),
         ('teasers', TeaserListBlock()),
         ('columns', ColumnsListBlock()),
         ('projects', CurrentProjectsListBlock()),
