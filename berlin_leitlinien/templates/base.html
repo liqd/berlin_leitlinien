@@ -1,4 +1,4 @@
-{% load i18n static wagtailuserbar %}
+{% load i18n static wagtailuserbar contrib_tags %}
 {% get_current_language as LANGUAGE_CODE %}
 
 <!DOCTYPE html>
@@ -30,6 +30,9 @@
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
+
+        {% tracking_enabled as tracking %}
+        {% if tracking %} {% tracking_code %} {% endif %}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
