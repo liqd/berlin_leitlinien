@@ -5,8 +5,18 @@
     <div class="l-wrapper">
         <div class="l-center-8">
             <h1>{{ self.title }}</h1>
-
             {{ self.body|richtext }}
         </div>
+        {% for block in self.body_block %}
+        <div class="block block-{{ block.block_type }}">
+        {% if block.block_type == 'teasers' or block.block_type == 'projects' %}
+            {% include_block block %}
+        {% else %}
+            <div class="l-wrapper">
+                {% include_block block %}
+            </div>
+        {% endif %}
+        </div>
+        {% endfor %}
     </div>
 {% endblock %}

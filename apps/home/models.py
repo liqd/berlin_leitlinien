@@ -47,10 +47,20 @@ class HomePage(Page):
 
 class SimplePage(Page):
     body = fields.RichTextField(blank=True)
+    body_block = fields.StreamField([
+        ('text', blocks.RichTextBlock(icon='doc-full',
+                                      template='home/blocks/text.html')),
+        ('html', blocks.RawHTMLBlock(template='home/blocks/text.html')),
+        ('teasers', TeaserListBlock()),
+        ('columns', ColumnsListBlock()),
+        ('projects', CurrentProjectsListBlock()),
+        ('updates', UpdatesBlock())
+    ], blank=True)
 
     content_panels = [
         edit_handlers.FieldPanel('title'),
         edit_handlers.FieldPanel('body'),
+        edit_handlers.StreamFieldPanel('body_block'),
     ]
 
     parent_page_types = [
