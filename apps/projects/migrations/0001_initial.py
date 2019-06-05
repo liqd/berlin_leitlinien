@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 import django.db.models.deletion
-import wagtail.wagtailcore.fields
+import wagtail.core.fields
 
 
 class Migration(migrations.Migration):
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
                 ('short_description', models.CharField(help_text='Shown in list.', max_length=112)),
-                ('description', wagtail.wagtailcore.fields.RichTextField()),
+                ('description', wagtail.core.fields.RichTextField()),
                 ('image', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage')),
             ],
             options={
@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
                 ('start_date', models.DateField()),
                 ('end_date', models.DateField()),
                 ('short_description', models.CharField(help_text='Shown in list.', max_length=112)),
-                ('description', wagtail.wagtailcore.fields.RichTextField()),
+                ('description', wagtail.core.fields.RichTextField()),
                 ('embed_code', models.TextField()),
                 ('image', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage')),
             ],

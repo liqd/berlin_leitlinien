@@ -7,8 +7,8 @@ import apps.projects.blocks
 from django.db import migrations, models
 import django.db.models.deletion
 import modelcluster.fields
-import wagtail.wagtailcore.blocks
-import wagtail.wagtailcore.fields
+import wagtail.core.blocks
+import wagtail.core.fields
 
 
 class Migration(migrations.Migration):
@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
             name='HomePage',
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('body', wagtail.wagtailcore.fields.StreamField((('text', wagtail.wagtailcore.blocks.RichTextBlock(icon='doc-full', template='home/blocks/text.html')), ('teasers', wagtail.wagtailcore.blocks.StructBlock((('teasers', wagtail.wagtailcore.blocks.ListBlock(apps.home.blocks.TeaserBlock)),))), ('columns', wagtail.wagtailcore.blocks.StructBlock((('columns', wagtail.wagtailcore.blocks.ListBlock(apps.home.blocks.ColumnBlock)),))), ('projects', wagtail.wagtailcore.blocks.StructBlock((('title', wagtail.wagtailcore.blocks.CharBlock()), ('projects', wagtail.wagtailcore.blocks.ListBlock(apps.projects.blocks.CurrentProjectBlock))))), ('updates', wagtail.wagtailcore.blocks.StructBlock((('status', wagtail.wagtailcore.blocks.PageChooserBlock(target_model=['blog.BlogEntryPage'])), ('calendar', wagtail.wagtailcore.blocks.StructBlock((('heading', wagtail.wagtailcore.blocks.CharBlock(required=False)),))))))))),
+                ('body', wagtail.core.fields.StreamField((('text', wagtail.core.blocks.RichTextBlock(icon='doc-full', template='home/blocks/text.html')), ('teasers', wagtail.core.blocks.StructBlock((('teasers', wagtail.core.blocks.ListBlock(apps.home.blocks.TeaserBlock)),))), ('columns', wagtail.core.blocks.StructBlock((('columns', wagtail.core.blocks.ListBlock(apps.home.blocks.ColumnBlock)),))), ('projects', wagtail.core.blocks.StructBlock((('title', wagtail.core.blocks.CharBlock()), ('projects', wagtail.core.blocks.ListBlock(apps.projects.blocks.CurrentProjectBlock))))), ('updates', wagtail.core.blocks.StructBlock((('status', wagtail.core.blocks.PageChooserBlock(target_model=['blog.BlogEntryPage'])), ('calendar', wagtail.core.blocks.StructBlock((('heading', wagtail.core.blocks.CharBlock(required=False)),))))))))),
                 ('image', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.CustomImage')),
             ],
             options={
@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
             name='SimplePage',
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('body', wagtail.wagtailcore.fields.RichTextField(blank=True)),
+                ('body', wagtail.core.fields.RichTextField(blank=True)),
             ],
             options={
                 'abstract': False,

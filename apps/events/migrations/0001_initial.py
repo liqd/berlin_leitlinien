@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 import apps.contrib.mixins
 from django.db import migrations, models
 import django.db.models.deletion
-import wagtail.wagtailcore.fields
+import wagtail.core.fields
 
 
 class Migration(migrations.Migration):
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 ('place', models.CharField(max_length=32)),
                 ('contact', models.EmailField(max_length=254)),
                 ('short_description', models.CharField(help_text='Shown on the homepage.', max_length=112)),
-                ('description', wagtail.wagtailcore.fields.RichTextField()),
+                ('description', wagtail.core.fields.RichTextField()),
             ],
             options={
                 'verbose_name': 'Event',
