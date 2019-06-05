@@ -17,6 +17,12 @@ makemessages:
 server:
 	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8008
 
+.PHONY: watch
+watch:
+	trap 'kill %1' KILL; \
+	npm run watch & \
+	$(VIRTUAL_ENV)/bin/python3 manage.py runserver 8008
+
 .PHONY: lint
 lint:
 	EXIT_STATUS=0; \
