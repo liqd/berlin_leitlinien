@@ -12,6 +12,9 @@ module.exports = {
     ],
     vendor: [
       '@fortawesome/fontawesome-free/scss/fontawesome.scss',
+      '@fortawesome/fontawesome-free/scss/brands.scss',
+      '@fortawesome/fontawesome-free/scss/regular.scss',
+      '@fortawesome/fontawesome-free/scss/solid.scss',
       'jquery'
     ]
   },
