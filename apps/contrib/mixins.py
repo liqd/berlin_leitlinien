@@ -17,8 +17,11 @@ class PaginatorMixin:
         except paginator.EmptyPage:
             page = paginator_obj.page(paginator_obj.num_pages)
 
+        paginator_page_object_list = list(page.object_list)
+        paginator_page_object_list.reverse()
         context.update({
             'paginator_page': page,
+            'paginator_page_object_list': paginator_page_object_list
         })
 
         return context
