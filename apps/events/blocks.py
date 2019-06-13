@@ -1,7 +1,7 @@
 import json
 
 from django.core.serializers.json import DjangoJSONEncoder
-from wagtail.wagtailcore import blocks
+from wagtail.core import blocks
 
 from apps.events.models import EventPage
 
