@@ -153,3 +153,9 @@ WAGTAILIMAGES_IMAGE_MODEL = 'images.CustomImage'
 BASE_URL = 'http://localhost:8000'
 
 TRACKING_ENABLED = False
+
+WAGTAILADMIN_RICH_TEXT_EDITORS = {
+    'default': {
+        'WIDGET': 'wagtail.admin.rich_text.HalloRichTextArea'
+    }
+}
