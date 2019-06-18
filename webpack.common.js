@@ -52,8 +52,8 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: (loader) => [
-                autoprefixer({ browsers: ['last 3 versions', 'ie >= 11'] })
+              plugins: [
+                require('autoprefixer')
               ]
             }
           },
@@ -101,6 +101,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: './berlin_leitlinien/assets/images/**/*',
+        to: 'images/',
+        flatten: true
+      }
+    ])
   ]
 }
