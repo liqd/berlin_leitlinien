@@ -87,7 +87,10 @@ module.exports = {
     // folder by default. This may result in dependencies being included twice.
     // Setting `resolve.root` forces webpack to resolve all dependencies
     // against the local directory.
-    modules: [path.resolve('./node_modules')]
+    modules: [
+      path.resolve('./node_modules'),
+      path.resolve('./apps/'),
+    ]
   },
   plugins: [
     new webpack.ProvidePlugin({
