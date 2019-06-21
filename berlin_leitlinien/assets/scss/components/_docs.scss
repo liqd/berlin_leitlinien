@@ -46,7 +46,8 @@
 }
 
 .docs-block__body a[href^="/documents"]:before {
-    content: '\f15b';
+    content: '\f15b'; //fa-file
     font-family: 'Font Awesome 5 Free', serif;
+    font-weight: 400;
     margin-right: 0.3em;
 }
