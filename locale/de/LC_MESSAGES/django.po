@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-26 13:48+0000\n"
+"POT-Creation-Date: 2019-06-21 09:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,15 +41,15 @@ msgstr "Vorherige Seite"
 msgid "Next page"
 msgstr "Nächste Seite"
 
-#: apps/docs/models.py:23
+#: apps/docs/models.py:36
 msgid "Documents"
 msgstr "Dokumente"
 
-#: apps/events/models.py:17
+#: apps/events/models.py:18
 msgid "Calendar"
 msgstr "Kalender"
 
-#: apps/events/models.py:58
+#: apps/events/models.py:62
 msgid "Event"
 msgstr "Termin"
 
@@ -69,9 +69,14 @@ msgstr "Wo"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: apps/home/templates/home/includes/header.html:11
+#: apps/home/templates/home/includes/header.html:10
 msgid "Menu"
 msgstr "Menü"
+
+#: apps/projects/blocks.py:19
+msgid ""
+"Chose one or more Project Pages. Other pagetypes will result in an error."
+msgstr ""
 
 #: apps/projects/models.py:11
 msgid "Project Containers"
@@ -90,7 +95,7 @@ msgid "Project"
 msgstr "Vorhaben"
 
 #: apps/projects/templates/projects/blocks/projectslist_block.html:21
-#: apps/projects/templates/projects/project_container_page.html:38
+#: apps/projects/templates/projects/project_container_page.html:39
 msgid "go to project"
 msgstr "Zur Beteiligungsmöglichkeit"
 
