@@ -13,7 +13,6 @@ function showSlides() {
   if (!timeout) {
     timeout = 5000;
   }
-  console.log(timeout);
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
