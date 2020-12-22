@@ -24,7 +24,7 @@
     "sass-planifolia": "0.6.0",
     "terser-webpack-plugin": "5.1.1",
     "webpack": "4.46.0",
-    "webpack-merge": "4.2.2"
+    "webpack-merge": "5.7.3"
   },
   "devDependencies": {
     "husky": "6.0.0",
