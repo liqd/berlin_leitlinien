@@ -23,7 +23,6 @@ module.exports = {
     library: '[name]',
     path: path.resolve('./berlin_leitlinien/static/'),
     publicPath: '/static/',
-    filename: '[name].js'
   },
   externals: {
     'django': 'django'
@@ -51,10 +50,12 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              ident: 'postcss',
-              plugins: [
-                require('autoprefixer')
-              ]
+              postcssOptions: {
+                ident: 'postcss',
+                plugins: [
+                  require('autoprefixer')
+                ]
+              }
             }
           },
           {
@@ -79,6 +80,7 @@ module.exports = {
     ]
   },
   resolve: {
+    fallback: { path: require.resolve('path-browserify') },
     extensions: ['*', '.js', '.jsx', '.scss', '.css'],
     alias: {
       'jquery$': 'jquery/dist/jquery.min.js'
@@ -105,12 +107,11 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
-    new CopyWebpackPlugin([
-      {
+    new CopyWebpackPlugin({
+      patterns: [{
         from: './berlin_leitlinien/assets/images/**/*',
-        to: 'images/',
-        flatten: true
-      }
-    ])
+        to: 'images/[name].[ext]',
+      }]
+    })
   ]
 }
