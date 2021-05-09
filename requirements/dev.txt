@@ -1,5 +1,5 @@
 -r base.txt
-flake8==3.9.1
+flake8==3.9.2
 flake8-docstrings==1.6.0
 # pydocstyle 4.0 breaks flake8-docstrings 1.3.0. Remove after succesful update
 pydocstyle==3.0.0 # pyup: <4.0.0
